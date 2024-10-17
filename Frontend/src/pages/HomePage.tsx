@@ -16,26 +16,41 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen w-screen">
       <NavBar />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 h-screen">
-          <div className="px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Welcome to YourApp
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  The revolutionary app that simplifies your workflow and boosts
-                  productivity.
-                </p>
-              </div>
-              <div className="space-x-4">
-                <Button>Get Started</Button>
-                <Button variant="outline">Learn More</Button>
-              </div>
+        <section className="relative w-screen py-12 md:py-24 lg:py-32 xl:py-48 h-full z-0">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                Welcome to InvoTrak
+              </h1>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                The revolutionary app that simplifies your workflow and boosts
+                productivity.
+              </p>
+            </div>
+            <div className="space-x-4">
+              <Button>Get Started</Button>
+              <Button variant="outline">Learn More</Button>
             </div>
           </div>
+          <div className="flex flex-row justify-center items-center gap-5 mt-10 px-4 overflow-hidden">
+            <img
+              src={"/image3.jpg"}
+              alt="Feature image 1"
+              className="w-full sm:w-60 h-auto max-w-full"
+            />
+            <img
+              src={"/image3.jpg"}
+              alt="Feature image 2"
+              className="w-full sm:w-60 h-auto max-w-full"
+            />
+            <img
+              src={"/image3.jpg"}
+              alt="Feature image 3"
+              className="w-full sm:w-60 h-auto max-w-full"
+            />
+          </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="relative w-screen py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 z-10 shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.1)]">
           <div className="px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               Features
@@ -59,7 +74,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-screen py-12 md:py-24 lg:py-32">
           <div className="px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               Pricing Plans

@@ -7,9 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, Code, Layers, Zap } from "lucide-react";
+import { Code, Layers, Zap } from "lucide-react";
 import NavBar from "./components/NavBar.tsx";
 import Footer from "./components/Footer.tsx";
+import "./homepage.css";
 
 export default function HomePage() {
   return (
@@ -32,21 +33,21 @@ export default function HomePage() {
               <Button variant="outline">Learn More</Button>
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center gap-5 mt-10 px-4 overflow-hidden">
+          <div className="flex flex-row justify-center items-center gap-5 mt-32 px-4 overflow-hidden">
             <img
               src={"/image3.jpg"}
               alt="Feature image 1"
-              className="w-full sm:w-60 h-auto max-w-full"
+              className="block w-60 h-auto max-w-full border-4 border-white m-10 rounded-3xl shadow-[0_0px_25px_-3px_rgba(0,0,0,0.3)]"
             />
             <img
-              src={"/image3.jpg"}
-              alt="Feature image 2"
-              className="w-full sm:w-60 h-auto max-w-full"
+              src={"/image2.jpg"}
+              alt="Feature image 1"
+              className="block w-96 h-auto max-w-full border-4 border-white m-10 rounded-2xl shadow-[0_0px_25px_-3px_rgba(0,0,0,0.3)]"
             />
             <img
-              src={"/image3.jpg"}
+              src={"/image4.jpg"}
               alt="Feature image 3"
-              className="w-full sm:w-60 h-auto max-w-full"
+              className="block w-60 h-auto max-w-full border-4 border-white m-10 rounded-3xl shadow-[0_0px_25px_-3px_rgba(0,0,0,0.3)]"
             />
           </div>
         </section>
@@ -75,39 +76,16 @@ export default function HomePage() {
           </div>
         </section>
         <section className="w-screen py-12 md:py-24 lg:py-32">
-          <div className="px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
-              Pricing Plans
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <PricingCard
-                title="Basic"
-                price="$9.99"
-                description="Perfect for individuals and small teams."
-                features={["Feature 1", "Feature 2", "Feature 3"]}
-              />
-              <PricingCard
-                title="Pro"
-                price="$19.99"
-                description="Ideal for growing businesses and organizations."
-                features={[
-                  "All Basic features",
-                  "Feature 4",
-                  "Feature 5",
-                  "Priority support",
-                ]}
-              />
-              <PricingCard
-                title="Enterprise"
-                price="Custom"
-                description="Tailored solutions for large-scale operations."
-                features={[
-                  "All Pro features",
-                  "Custom integrations",
-                  "Dedicated account manager",
-                  "24/7 support",
-                ]}
-              />
+          <div className="flex flex-row w-screen">
+            <img src={"/svg1.svg"} alt="svg1" className="w-[38rem] pl-32" />
+            <div className="space-y-2">
+              <h1 className="text-xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                Feature 1
+              </h1>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                The revolutionary app that simplifies your workflow and boosts
+                productivity.
+              </p>
             </div>
           </div>
         </section>
@@ -132,40 +110,6 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
       </CardHeader>
       <CardContent>
         <CardDescription>{description}</CardDescription>
-      </CardContent>
-    </Card>
-  );
-}
-
-interface PricingCardProps {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-}
-
-function PricingCard({
-  title,
-  price,
-  description,
-  features,
-}: PricingCardProps) {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p className="text-3xl font-bold">{price}</p>
-        <ul className="mt-4 space-y-2">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center">
-              <ArrowRight className="w-4 h-4 mr-2" />
-              {feature}
-            </li>
-          ))}
-        </ul>
       </CardContent>
     </Card>
   );

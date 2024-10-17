@@ -13,12 +13,12 @@ import { Code } from "lucide-react";
 export default function NavBar() {
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 py-2">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6 py-2">
         <div className="flex h-14 items-center w-full">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <h1 className="font-bold">App Name</h1>
+                <h2 className="font-bold mr-8 ml-4">InvoTrak</h2>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Features</NavigationMenuTrigger>

@@ -2,10 +2,10 @@ export default function Footer() {
   return (
     <>
       <footer className="w-full py-6 bg-gray-100 dark:bg-gray-800">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © 2024 YourApp. All rights reserved.
+              © 2024 InvoTrak. All rights reserved.
             </p>
             <nav className="flex gap-4">
               <h1 className="text-sm hover:underline underline-offset-4">
